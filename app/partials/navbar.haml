@@ -1,0 +1,56 @@
+%nav.navbar.navbar-expand-md.navbar-fixed-js#home-serviteca
+  %a.navbar-brand{:href => "#"} 
+    %img{ :src=>"assets/img/logo.png", :alt=>""}
+  %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
+    %span.hamburger-box
+      %span.hamburger-inner
+  .offcanvas-collapse.fil#navbarNav
+    %ul.navbar-nav
+      %li.nav-item.active
+        %a.nav-link.active{:href => "#home-serviteca", "data-scroll" => ""} Inicio
+      %li.nav-item
+        %a.nav-link{:href => "#team-about", "data-scroll" => ""} Nosotros
+      %li.nav-item.dropdown
+        %a.nav-link.dropdown-toggle{:href => "#services","aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
+          Servicios
+        .dropdown-menu{"aria-labelledby" => "dropdownMenuButton"}
+          .content-drop
+            %a.dropdown-item{:href => "#"} 
+              %p Mantenimiento Preventivo de 2.000, 4.000, 8.000 Horas
+            %a.dropdown-item{:href => "#"} 
+              %p Mantenimiento Overhaool 24.000 Horas 
+            %a.dropdown-item{:href => "#"} 
+              %p Cambios de Rodamientos, Anillos, Empacaduras 
+            %a.dropdown-item{:href => "#"} 
+              %p Limpieza de Intercambiadores de Temperatura 
+            %a.dropdown-item{:href => "#"} 
+              %p Cambio de Repuestos, Filtros, Secadores
+            %a.dropdown-item{:href => "#"} 
+              %p Válvulas y Lubricantes 
+            %a.dropdown-item{:href => "#"} 
+              %p Limpieza de Radiadores
+            %a.dropdown-item{:href => "#"} 
+              %p Corrección de Fugas 
+            %a.dropdown-item{:href => "#"} 
+              %p Mantenimiento Overhaool 24.000 Horas 
+            %a.dropdown-item{:href => "#"} 
+              %p Chequeo de Sistemas Eléctricos s 
+            %a.dropdown-item{:href => "#"} 
+              %p Chequeo de sistemas Neumáticos 
+            %a.dropdown-item{:href => "#"} 
+              %p Mantenimiento de Motores Eléctricos  
+            %a.dropdown-item{:href => "#"} 
+              %p Limpieza de Tanques Y Radiadores
+            %a.dropdown-item{:href => "#"} 
+              %p Reparación de válvulas  
+            %a.dropdown-item{:href => "#"} 
+              %p Proyectos de instalaciones y asesoría
+        -# %a.nav-link{:href => "#services", "data-scroll" => ""} Servicios
+      %li.nav-item
+        %a.nav-link{:href => "#projects", "data-scroll" => ""} Experiencias
+      %li.nav-item
+        %a.nav-link{:href => "#footer", "data-scroll" => ""} Contacto
+      %li.nav-item.nav-language
+        %a.active.language-link.language{:href => "#"} ESP
+        %a.language{:href => "#"} ENG
+

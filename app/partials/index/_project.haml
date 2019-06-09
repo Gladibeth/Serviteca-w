@@ -1,0 +1,45 @@
+%section.project#projects
+  .container
+    .content-project-title
+      %h1 Experiencias
+      %p Estamos orgullosos con la experiencia que hemos obtenido en el mercado
+    -# - projects = [{image: "assets/img/1.jpg", title: 'Proyecto 1', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium eligendi sed perferendis.'},{image: "assets/img/1.jpg", title: 'Proyecto 2', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium eligendi sed perferendis.'},{image: "assets/img/1.jpg", title: 'Proyecto 3', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium eligendi sed perferendis.'}]
+    .project-carousel
+      %a.card-project{ href: "#"}
+        .card-content
+          .card-project-img
+            .card-content-img{ style: "background-image: url('assets/img/1.jpg')"}
+          .card-project-content
+            %h4.title-project Proyecto 1
+            %p.description-project Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium eligendi sed perferendis.
+      %a.card-project{ href: "#"}
+        .card-content
+          .card-project-img
+            .card-content-img{ style: "background-image: url('assets/img/2.jpg')"}
+          .card-project-content
+            %h4.title-project Proyecto 2
+            %p.description-project Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium eligendi sed perferendis.
+      %a.card-project{ href: "#"}
+        .card-content
+          .card-project-img
+            .card-content-img{ style: "background-image: url('assets/img/1.jpg')"}
+          .card-project-content
+            %h4.title-project Proyecto 3
+            %p.description-project Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium eligendi sed perferendis.
+    -# .row.d-lg-none.card-project-slider
+    -#   - projects.each_with_index do |project|
+    -#     %a.wow.animated.fadeInUp{ 'data-wow-duration' => '1500ms', 'data-wow-delay' => '.5s',:href=>"#"  }
+    -#       .card{ style:'display: flex; justify-content: flex-start;'}
+    -#         .card-project
+    -#           .card-project-img
+    -#             .card-content-img{ style: "background-image: url('#{project[:image]}')"}
+    -#             -# %img{:alt => "img09", :src => "#{project[:image]}"}/
+    -#           .card-project-content
+    -#             %h4.title-project= project[:title]
+    -#             %p.description-project= project[:description]
+
+    .cta-project
+      %a.btn.btn-primary.btn-shadow{:href => "#"} Nuestros Proyectos
+
+
+      -#%button.btn.btn-outline-success{:type => "button"} Success

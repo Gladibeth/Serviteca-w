@@ -1,0 +1,22 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+!!!
+%html{lang: "en"}
+  = render ('app/partials/head.haml')
+  %body{ "data-spy" => "scroll","data-target" => "#navbarNav" }
+    %section.home
+      = render ('app/partials/navbar.haml')
+      = render ('app/partials/index/_slider.haml')
+    %i.icofont-bebo
+    %i.icofont-dart.icofont-5x
+
+    = render ('app/partials/index/_services.haml')
+    = render ('app/partials/index/_about.haml')
+    = render ('app/partials/index/_project.haml')
+    = render ('app/partials/index/_footer.haml')
+
+      
+  
+    

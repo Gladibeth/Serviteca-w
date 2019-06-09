@@ -1,0 +1,60 @@
+%section.services#services
+  .mask
+    %img{ :alt => "", :src => "assets/img/cog.png"}/
+  .container
+    .content-services-title
+      %h1 Servicios
+      %p Nuestros servicios están especializados en la ejecución de venta y distribucion de repuestos
+    - services = [{image: "assets/img/07.jpg", alt: 'Agenciamiento Naviero', title: 'Mantenimiento Preventivo de 2.000, 4.000, 8.000 Horaso', description: 'Carga y descarga de contenedores', ct: 'Ver más', date:''},{image: "assets/img/13.jpg", alt:'Agenciamiento Aduanal',title: 'Mantenimiento Overhaool 24.000 Horas', description: 'Internación de mercancía', ct: 'Ver más'},{image: "assets/img/14.jpg", alt:'Operación Portuaria', title: 'Cambios de Rodamientos, Anillos, Empacaduras ', description: 'Servicio de carga descarga en general zona portuaria', ct: 'Ver más'},{image: "assets/img/15.jpg",alt:'Limpieza de Radiadores', title: 'Limpieza de Radiadores', description: 'Recolección, transporte, diesposición final', ct: 'Ver más'}]
+    .row.row-services
+      -# - services.each_with_index do |service, x|
+      .col-xl-7.col-lg-7.col-md-7.col-sm-6.col-xs-12.content-services-card
+        .grid
+          %figure.effect-ming.wow.animated
+            %img{ :alt => "", :src => "assets/img/slider1.png"}/
+            %figcaption
+              %h4.title-service Mantenimiento Preventivo de 2.000, 4.000, 8.000 Horas
+              %p.description-service Servicios garantizados
+              %a{:href => "#"} Ver más
+      .col-xl-5.col-lg-5.col-md-5.col-sm-6.col-xs-12.content-services-card
+        .grid
+          %figure.effect-ming.wow.animated
+            %img{ :alt => "", :src => "assets/img/1.jpg"}/
+            %figcaption
+              %h4.title-service Mantenimiento Overhaool 24.000 Horas
+              %p.description-service Servicios garantizados
+              %a{:href => "#"} Ver más
+      .col-xl-5.col-lg-5.col-md-5.col-sm-6.col-xs-12.content-services-card
+        .grid
+          %figure.effect-ming.wow.animated
+            %img{ :alt => "", :src => "assets/img/2.jpg"}/
+            %figcaption
+              %h4.title-service Cambios de Rodamientos, Anillos, Empacaduras 
+              %p.description-service Servicios garantizados
+              %a{:href => "#"} Ver más
+      .col-xl-7.col-lg-7.col-md-7.col-sm-6.col-xs-12.content-services-card
+        .grid
+          %figure.effect-ming.wow.animated
+            %img{ :alt => "", :src => "assets/img/slider1.png"}/
+            %figcaption
+              %h4.title-service Cambio de Repuestos, Filtros, Secadores, Válvulas y Lubricantes
+              %p.description-service Servicios garantizados
+              %a{:href => "#"} Ver más
+
+
+-# %section.services#services
+-#   .container
+-#     .content-services-title
+-#       %h1 Servicios
+-#       %p Nuestros servicios están especializados en la ejecución de venta y distribucion repuestos
+-#     - services = [{image: "assets/img/07.jpg", alt: 'Agenciamiento Naviero', title: 'Mantenimiento Preventivo de 2.000, 4.000, 8.000 Horaso', description: 'Carga y descarga de contenedores', ct: 'Ver más', date:''},{image: "assets/img/13.jpg", alt:'Agenciamiento Aduanal',title: 'Mantenimiento Overhaool 24.000 Horas', description: 'Internación de mercancía', ct: 'Ver más'},{image: "assets/img/14.jpg", alt:'Operación Portuaria', title: 'Cambios de Rodamientos, Anillos, Empacaduras ', description: 'Servicio de carga descarga en general zona portuaria', ct: 'Ver más'},{image: "assets/img/15.jpg",alt:'Limpieza de Radiadores', title: 'Limpieza de Radiadores', description: 'Recolección, transporte, diesposición final', ct: 'Ver más'}]
+-#     .row
+-#       - services.each_with_index do |service, x|
+-#         .col-xl-6.col-lg-6.col-md-6.col-sm-6.content-services-card
+-#           .grid
+-#             %figure.effect-goliath.wow.animated{class: " img-#{x} #{x.even? ? 'fadeInLeft' : 'fadeInRight'}", 'data-wow-duration' => '1500ms', 'data-wow-delay' => "#{x * 0.5}s"}
+-#               %img{ :alt => "#{service[:alt]}", :src => "#{service[:image]}"}/
+-#               %figcaption
+-#                 %h4.title-service= service[:title]
+-#                 %p.description-service= service[:description]
+-#                 %a{:href => "#"}= service[:ct]

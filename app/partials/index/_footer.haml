@@ -1,0 +1,79 @@
+%footer.footer#footer
+  .mask
+    %img{ :alt => "", :src => "assets/img/gears.png"}/
+  .container
+    .footer-container
+      .footer-content
+        .footer-content-logo
+          %img{ :src=>"assets/img/logo.png", :alt=>""}
+        %h3 Contáctanos
+        .footer-content-inf
+          .content-inf
+            %p Correo
+            %a{ :href => ''} servitecaservicio@gmail.com
+          .content-inf
+            %p Teléfonos
+            .content-phone
+              %span 0412-5025619 / 
+              %span  0412-4342295 / 
+              %span 0412-1213141 
+          .content-inf
+            %p Dirección
+            %span Valencia, Estado Carabobo – Venezuela.
+          .content-inf
+            -# %p Nuestras redes
+            %a.icons{:href=>"#"}
+              %i.fa.fa-facebook
+            %a.icons{:href=>"#"}
+              %i.fa.fa-instagram
+            %a.icons{:href=>"#"}
+              %i.fa.fa-twitter
+
+ 
+      .footer-form
+        %form
+          .content-form
+            .control.control-expanded
+              .control-label
+                %label(for="") Nombre y Apellido
+              %input.input.fade-background{:name => "name", :placeholder => "Nombre y Apellido", :type => "text"}/
+            .control.control-expanded
+              .control-label
+                %label(for="") Teléfono
+              %input.input.fade-background{:name => "phone", :placeholder => "Teléfono", :type => "tel"}/
+            .control.control-expanded
+              .control-label
+                %label(for="") Correo
+              %input.input.fade-background{:name => "email", :placeholder => "Correo", :type => "email"}/
+            .control.control-expanded
+              .control-label
+                %label(for="") Mensaje
+              %textarea.fade-background{ :placeholder => "Escribe tú mensaje"}
+          .cta-form
+            %a.btn.btn-primary.btn-shadow{:href => "#" } Enviar
+            
+    %hr
+    .footer-company 
+      %p Copyright © SERVITECA 2019 derechos reservados
+      -# .img-footer-company
+      -#   %img{ :src=>"assets/img/slice_footer.png", :alt=>""}
+%script{src: "assets/js/jquery.min.js"}
+-# %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"}
+%script{src: "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"}
+%script{src: "assets/js/isotope.js"}
+%script{src: "assets/js/bootstrap.min.js"}
+%script{src: "assets/js/slick.min.js"}
+%script{src: "assets/js/wow.min.js"}
+%script{src: "assets/js/wow-settings.js"}
+%script{src: "assets/js/setting-slick.js"}
+%script{src: "assets/js/smooth-scroll.min.js"}
+%script{src: "assets/js/main.js"}
+:javascript
+  smoothScroll.init({
+  selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+  selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+  speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+  easing: 'easeInOutCubic', // Easing pattern to use
+  offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+  callback: function ( anchor, toggle ) {} // Function to run after scrolling
+  });

@@ -1,0 +1,22 @@
+%nav.navbar.navbar-expand-md.navbar-fixed-js#home-serviteca
+  %a.navbar-brand{:href => "#"} 
+    %img{ :src=>"assets/img/CADERCO.svg", :alt=>""}
+  %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
+    %span.hamburger-box
+      %span.hamburger-inner
+  .offcanvas-collapse.fil#navbarNav
+    %ul.navbar-nav
+      %li.nav-item
+        %a.nav-link.active{:href => "index.html", "data-scroll" => ""} Inicio
+      %li.nav-item
+        %a.nav-link{:href => "about.html", "data-scroll" => ""} Nosotros
+      %li.nav-item
+        %a.nav-link{:href => "#services", "data-scroll" => ""} Servicios
+      %li.nav-item
+        %a.nav-link{:href => "#projects", "data-scroll" => ""} Experiencias
+      %li.nav-item
+        %a.nav-link{:href => "#footer", "data-scroll" => ""} Contacto
+      %li.nav-item.nav-language
+        %a.active.language-link.language{:href => "#"} ESP
+        %a.language{:href => "#"} ENG
+

@@ -1,0 +1,19 @@
+- slider = [{image: "assets/img/3.jpg", title: 'Serviteca', description: 'Somos el aire que impulsa la industria'}, {image: "assets/img/1.jpg", title: 'Serviteca', description: 'Su objetivo es brindar servicios de calidad'},{image: "assets/img/slider1.png", title: 'Serviteca', description: 'Es una empresa dedicada a la venta y distribución de repuestos, aceites, mantenimiento'}]
+.carousel-content
+  -# .redes-social
+  -#   %a{:href=>"#"}
+  -#     %i.fa.fa-facebook
+  -#   %a{:href=>"#"}
+  -#     %i.fa.fa-instagram
+  -#   %a{:href=>"#"}
+  -#     %i.fa.fa-twitter
+  .carousel-divisor
+    .carrusel-slider
+      .single-item
+        - slider.each_with_index do |slide|
+          .item
+            %img.img-responsive{:src => "#{slide[:image]}"}/
+            .mask-item
+              .banner-info
+                %h1.title-banner.wow.animated.fadeInUp{ 'data-wow-duration' => '1500ms', 'data-wow-delay' => '.2s'  }= slide[:title]
+                %p.wow.animated.fadeInUp{ 'data-wow-duration' => '1500ms', 'data-wow-delay' => '.9s'  }= slide[:description]

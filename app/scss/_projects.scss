@@ -1,0 +1,86 @@
+.projects {
+  padding-top: 100px;
+}
+
+.p1:hover, .p2:hover {
+	opacity: .3;
+  cursor: pointer;
+}
+
+
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+  text-align: center;
+  margin-left: 80px;
+}
+
+.single-content img {
+	width: 290px;
+	height: 100%;
+	margin: 10px;
+}
+
+.filters {
+	width: 100%;
+	text-align: center;
+  ul {
+    list-style: none;
+    padding: 20px 0;
+    .content-project-title {
+      display: flex;
+      justify-content: flex-start;
+      padding: 80px 0 50px 0;
+      margin-bottom: 30px;
+      flex-direction: column;
+      
+      h1 {
+        font-family: $montserrat;
+        font-weight: 700 !important;
+        position: relative;
+        &:after{
+          background: $blue-serviteca;
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          bottom: 10px;
+          // left: 27%;
+          border-radius: 50%;
+          
+        }
+      }
+      p {
+        font-family: $montserrat;
+        font-size: 18px;
+        // width: 50%;
+        @include respond-to(sm) {
+          width: 80%;
+        }
+        @include respond-to(xs) {
+          width: 80%;
+        }
+      }
+      
+    }
+    li {
+      display: inline;
+      padding: 10px 15px;
+      font-size: 13px;
+      color: $black;
+      font-weight: 400;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-family: $montserrat;
+
+      
+      &.active {
+        color: $gray-serviteca;
+      }
+    }
+  }
+}
+
+

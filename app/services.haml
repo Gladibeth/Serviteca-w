@@ -1,0 +1,45 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+!!!
+%html{lang: "en"}
+  = render ('app/partials/head.haml')
+  %body
+    %section.home
+      = render ('app/partials/navbar.haml')
+    
+    %section.banner-about
+      .banner-img
+        %img.img-responsive{:src => "assets/img/1.jpg"}
+        .banner-mask
+          .banner-inf
+            %h1.wow.animated.fadeInUp{ 'data-wow-duration' => '1500ms', 'data-wow-delay' => '.2s'  } Mantenimiento Overhaool 24.000 Horas
+    -# = render ('app/partials/index/_services.haml')
+    %section.services-details
+      .container
+        .content-details
+        .content-details-specific
+          %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit unde sequi, dolorem provident vitae expedita, quos vero minima enim praesentium iusto iste tenetur. Ex, vitae quibusdam dolorum deserunt suscipit quidem.
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, corrupti! Totam repellat, tempora molestiae dolorum esse ex ab, praesentium explicabo porro rem fugit iste reprehenderit voluptatum ut, voluptatem debitis dolorem!
+          %p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium animi quisquam obcaecati reprehenderit laboriosam distinctio, totam sequi praesentium, magni asperiores exercitationem sint accusantium nesciunt sed veritatis dolore delectus fugiat at.
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, saepe totam dolor dicta temporibus voluptatem, architecto sit vel impedit ut nostrum veritatis quisquam itaque? Porro pariatur ipsam delectus! Voluptate, quisquam.
+    = render ('app/partials/index/_footer.haml')
+  
+:scss
+  .content-details {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 40px 22px;
+    color: #888;
+    background: #fff;
+  }
+  .content-details-specific {
+    font-size: 1.25em;
+    //max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 30px 100px;
+    color: #3b393d;
+  }

@@ -1,0 +1,60 @@
+.dropdown {
+  &:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.dropdown-menu {
+  top: 40px;
+  left: -340px;
+  border: 0;
+  border-radius: 0;
+  a {
+    font-family: $montserrat;
+    font-size: 15px;
+
+    @include respond-to(xs) {
+      font-size: 12px;
+    
+    }
+  }
+
+  @include respond-to(md) {
+    margin-left: -70px;
+  }
+
+  @include respond-to(sm) {
+    margin-top: 20px;
+  }
+  @include respond-to(xs) {
+    display: block;
+    margin-left: -10px;
+  }
+}
+
+
+.content-drop{
+  display: grid;
+  grid-template-columns: 60% 40%; 
+  padding:15px 20px 15px 10px;
+
+  @include respond-to(sm) {
+    grid-template-columns: 50% 50%;
+  }
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    padding: 0;
+  }
+
+  a {
+    @include respond-to(xs) {
+      padding: 0px 10px;
+    }
+  }
+}

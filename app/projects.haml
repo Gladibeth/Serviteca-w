@@ -1,0 +1,42 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+!!!
+%html{lang: "en"}
+  = render ('app/partials/head.haml')
+  %body
+    %section.home
+      = render ('app/partials/navbar_1.haml')
+      
+    %section.projects
+      .filters.filter-button-group
+        %ul
+          .content-project-title
+            %h1 Experiencias
+            %p Estamos orgullosos con la experiencia que hemos obtenido en el mercado
+          %li.active{"data-filter" => "*"} Todos
+          %li{"data-filter" => ".aduana"} Agenciamiento aduanal
+          %li{"data-filter" => ".naviero"} Agenciamiento naviero
+          %li{"data-filter" => ".portuaria"} Operación Portuaria
+          %li{"data-filter" => ".manejo"} Manejo de materiales
+      .content.grid
+        .single-content.aduana.naviero.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/59da3c9fb7411cdef9be095e/1507480179577/Portfolio%2BTemplate%2BAMD-13.png"}/
+        .single-content.manejo.portuaria.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/5b71c491b8a045325bf1beba/1534182696851/Screen+Shot+2018-08-13+at+1.48.35+PM.png"}/
+        .single-content.manejo.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/59da52ba29f187b71a84628e/1507480323521/Portfolio+Template+AMD-06.jpg"}/
+        .single-content.aduana.portuaria.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/5b71a4cd0ebbe87857c695de/1534181858373/Portfolio+Template+AMD-11.png"}/
+        .single-content.naviero.manejo.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/59da3b4bf7e0ab21edcb9aa1/1507480179530/Portfolio+Template+AMD-06.png"}/
+        .single-content.webdesign.brand.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/59da46128419c28f51bc28b1/1534175868854/Portfolio+Template+AMD-04.png"}/
+        .single-content.manejo.aduana.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/5b71c1e221c67c0feefe2a10/1534182546003/Portfolio+Template+AMD-03.png"}/
+        .single-content.aduana.naviero.grid-item
+          %img.p2{:src => "https://static1.squarespace.com/static/56c5196f4c2f85dda57c1d66/59d944df8a02c7abc311e81d/59d9455546c3c4655adade94/1507480179518/Portfolio+Template+AMD-01.png"}/
+  
+
+    = render ('app/partials/index/_footer.haml')
